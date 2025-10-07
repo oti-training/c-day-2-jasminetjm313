@@ -17,7 +17,7 @@ float read_voltage_sensor(int sensor_id) {
     
     if (sensor_id < 0 || sensor_id >= 5) {
         printf("Error: Invalid sensor ID %d. Must be between 0-4.\n", sensor_id);
-        return -1 // Return an error code
+        return -1.0f; // Return an error code
     }
 	
     // TODO: Debug this - add bounds check f                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              or sensor_id (0-4 valid)
