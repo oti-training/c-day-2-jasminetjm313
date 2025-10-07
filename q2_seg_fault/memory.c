@@ -14,8 +14,13 @@
 
 float read_voltage_sensor(int sensor_id) {
     float voltages[5] = {1.8f, 2.0f, 2.5f, 3.0f, 3.3f};  // Valid sensors 0-4
-
-    // TODO: Debug this - add bounds check for sensor_id (0-4 valid)
+    
+    if (sensor_id < 0 || sensor_id >= 5) {
+        printf("Error: Invalid sensor ID %d. Must be between 0-4.\n", sensor_id);
+        return -1 // Return an error code
+    }
+	
+    // TODO: Debug this - add bounds check f                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              or sensor_id (0-4 valid)
     return voltages[sensor_id];
 }
 
